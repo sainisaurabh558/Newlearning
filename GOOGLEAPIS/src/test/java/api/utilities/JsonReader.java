@@ -17,9 +17,7 @@ public class JsonReader {
         String content = new String(Files.readAllBytes(file.toPath()));
         
         JSONObject Jsob = new JSONObject(content);
-        
-        System.out.println("Data fecthed from the file jsob"+Jsob);
-
-        return Jsob;
+        Jsob.put("website", "https://chatgpt.com/");
+               return Jsob;
     }
 }
