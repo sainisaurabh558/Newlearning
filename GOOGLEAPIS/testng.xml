@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite">
+<suite name="Suite1">
 <listeners>
   		<listener  class-name="api.utilities.ExtentReportManager" />
    </listeners>
-  <test thread-count="5" name="Test" >
+  <test thread-count="5" name="Test1" >
     <classes>
       <class name="api.test.Addplace"/>
     </classes>
