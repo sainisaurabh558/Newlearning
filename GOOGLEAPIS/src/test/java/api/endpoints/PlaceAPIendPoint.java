@@ -12,7 +12,7 @@ public class PlaceAPIendPoint {
 
 	// method created for getting URL's from properties file.
 
-	// method created for getting URL's from properties file
+	// method created for getting URL's from properties file.
 	static ResourceBundle getURL() {
 		ResourceBundle routes = ResourceBundle.getBundle("endpointcollection"); // Load properties file // name of the
 																				// properties file
