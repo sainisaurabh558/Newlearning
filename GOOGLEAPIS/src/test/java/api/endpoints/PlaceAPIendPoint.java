@@ -27,7 +27,6 @@ public class PlaceAPIendPoint {
 				.queryParam("key", "qaclick123").header("Content-Type", "Application/json").when().post(AddURL).then().extract().response().asString();
 
 		return response;
-		System.out.println(response);
 
 	}
 }
