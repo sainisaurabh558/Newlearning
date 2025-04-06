@@ -10,7 +10,7 @@ import api.utilities.JsonReader;
 
 public class PlaceAPIendPoint {
 
-	// method created for getting URL's from properties file
+	// method created for getting URL's from properties file.
 
 	// method created for getting URL's from properties file
 	static ResourceBundle getURL() {
