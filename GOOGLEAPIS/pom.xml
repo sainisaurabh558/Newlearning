@@ -66,6 +66,12 @@
     <artifactId>log4j-core</artifactId>
     <version>2.18.0</version>
   </dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3  Used to generate the random data-->
+<dependency>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-lang3</artifactId>
+    <version>3.17.0</version>
+</dependency>
    
   </dependencies>
   

@@ -11,7 +11,6 @@ import io.restassured.response.Response;
 
 public class PlaceAPIendPoint {
 
-	// method created for getting URL's from properties file.
 
 	// method created for getting URL's from properties file.
 	static ResourceBundle getURL() {
@@ -22,7 +21,6 @@ public class PlaceAPIendPoint {
 
 	public static Response addPlace() throws IOException, URISyntaxException {
 		String AddURL = getURL().getString("AddPlaceAPI_post");
-		System.out.println("here is the URL fetched"+AddURL);
 
 		Response  response = given().body((JsonReader.addPlaceJson()).toString())
 				.queryParam("key", "qaclick123").header("Content-Type", "Application/json").when().post(AddURL).then().extract().response();
