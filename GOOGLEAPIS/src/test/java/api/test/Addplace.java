@@ -20,7 +20,7 @@ public class Addplace {
 	String place_id;
 
 
-	@Test (invocationCount = 5)
+	@Test (invocationCount = 15)
 	public void TestAddPlaceAPI() throws IOException, URISyntaxException
 
 	{

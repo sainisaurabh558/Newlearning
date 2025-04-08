@@ -1,5 +1,7 @@
 package api.utilities;
 
+import java.util.Random;
+
 import org.apache.commons.lang3.RandomStringUtils;
 
 import com.github.javafaker.Faker;
@@ -8,6 +10,7 @@ public class DataGenerator{
 
 
 	public  static Faker faker = new Faker();
+	 Random random = new Random();
 
 	public enum ENUMCOL {
 		FIRSTNAME,
@@ -54,6 +57,11 @@ public class DataGenerator{
 		return faker.number().digits(count);
 	}
 
+	public static double getDoubleNumber() {
+		return faker.number().randomDouble(7, 6, 7)* (-1);
+	}
+	
+		
 	public static int getRandomNumber(int min, int max) {
 		return faker.number().numberBetween(min, max);
 	}
