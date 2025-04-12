@@ -10,7 +10,7 @@ import org.json.JSONObject;
 
 import api.utilities.DataGenerator.ENUMCOL;       
 
-public class JsonReader {
+public class JsonReaderAndMod {
 
 
 	public static JSONObject addPlaceJson() throws IOException, URISyntaxException {

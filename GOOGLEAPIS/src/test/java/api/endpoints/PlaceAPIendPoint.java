@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.ResourceBundle;
 
-import api.utilities.JsonReader;
+import api.utilities.JsonReaderAndMod;
 import io.restassured.response.Response;
 
 public class PlaceAPIendPoint {
@@ -22,7 +22,7 @@ public class PlaceAPIendPoint {
 	public static Response addPlace() throws IOException, URISyntaxException {
 		String AddURL = getURL().getString("AddPlaceAPI_post");
 
-		Response  response = given().body((JsonReader.addPlaceJson()).toString())
+		Response  response = given().body((JsonReaderAndMod.addPlaceJson()).toString())
 				.queryParam("key", "qaclick123").header("Content-Type", "Application/json").when().post(AddURL).then().extract().response();
 
 		return response;
