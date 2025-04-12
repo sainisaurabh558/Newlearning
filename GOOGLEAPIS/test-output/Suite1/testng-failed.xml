@@ -8,7 +8,7 @@
     <classes>
       <class name="api.test.Addplace">
         <methods>
-          <include name="TestAddPlaceAPI"/>
+          <include name="sqlInjectionM"/>
         </methods>
       </class> <!-- api.test.Addplace -->
     </classes>

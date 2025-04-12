@@ -19,8 +19,8 @@ public class ExtentReportManager implements ITestListener
 {
 	private static ThreadLocal<ExtentTest> testM = new ThreadLocal<>();
 	public ExtentSparkReporter sparkReporter;
-	public ExtentReports extent;
-	public ExtentTest test;
+	public static ExtentReports extent;
+	public  static ExtentTest test;
 
 	String repName;
 

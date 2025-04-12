@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import java.nio.file.Files;
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 import org.json.JSONObject;
 
@@ -58,59 +60,46 @@ public class JsonReaderAndMod {
 		}
 		jsonobject.put("types", randomArray);
 		System.out.println("randomArray"+randomArray);
-		
+
 		//Adding random value to the lat long
-		
+
 		JSONObject location= jsonobject.getJSONObject("location");
 		location.put("lat", DataGenerator.getDoubleNumber());
 		location.put("lng", DataGenerator.getDoubleNumber());
-		
+
 		jsonobject.put("location", location);
-		
-		
+
+		// updating the json file
+		TextFileReaderAndMod textFileReaderAndMod = new TextFileReaderAndMod();
+		List<String> injectionValue= textFileReaderAndMod.textReader();
 
 
 
+		// Step 4: Loop through payloads
+		for (String payload : injectionValue) {
 
+			Iterator<String> keys = jsonobject.keys();
 
+			// Step 5: For each key, inject the payload
+			while (keys.hasNext()) {
+				String key = keys.next();
 
+				// Clone original JSON for each test
+				JSONObject testJson = new JSONObject(jsonobject.toString());
 
+				// Only inject into simple key-value pairs (avoid nested objects or arrays)
+				if (testJson.get(key) instanceof String || testJson.get(key) instanceof Number) {
+					testJson.put(key, payload); 
+					
+					 jsonobject = new JSONObject(testJson.toString());
 
+					System.out.println("🔍 Injecting payload into key: " + key);
+					System.out.println("Request Body:\n" + testJson.toString(2));
 
+				}
+			}
+		}
 
-
-
-
-
-
-
-		// Get the types array from the JSON object
-		//		JSONArray typesArray = jsonobject.getJSONArray("types");
-		//
-		//		try {
-		//
-		//			for (int i = 0; i < typesArray.length(); i++) {
-		//
-		//				if (typesArray.getString(i).equals("shop")) {
-		//					System.out.println("Before update: " + typesArray.getString(i));
-		//
-		//
-		//					typesArray.put(i, "hello");  
-		//
-		//					System.out.println("After update: " + typesArray.getString(i));
-		//					break; 
-		//				}
-		//			}
-		//
-		//
-		//			jsonobject.put("types", typesArray);
-		//
-		//		} catch (Exception e) {
-		//
-		//			e.printStackTrace();
-		//		}
-
-
-		return jsonobject;
-	}
+	return jsonobject;
+}
 }

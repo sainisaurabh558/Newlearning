@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Apr 07 08:22:53 IST 2025</td>
+<td>Started on:</td><td>Sat Apr 12 23:01:37 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>13 seconds (13140 ms)</td>
+<tr><td>Total time:</td><td>5 seconds (5378 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,15 +76,9 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='api.test.Addplace.TestAddPlaceAPI()'><b>TestAddPlaceAPI</b><br>Test class: api.test.Addplace</td>
-<td><div><pre>io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document
-	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1002)
-	at io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967)
-	at io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:1047)
-	at io.restassured.path.json.JsonPath.get(JsonPath.java:202)
-	at io.restassured.path.json.JsonPath.getString(JsonPath.java:352)
-	at api.utilities.StringConverter.convertStringToJson(StringConverter.java:13)
-	at api.test.Addplace.TestAddPlaceAPI(Addplace.java:31)
+<td title='api.test.Addplace.sqlInjectionM()'><b>sqlInjectionM</b><br>Test class: api.test.Addplace</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;com.aventstack.extentreports.ExtentTest.info(String)&quot; because &quot;this.loggerE&quot; is null
+	at api.test.Addplace.sqlInjectionM(Addplace.java:59)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -111,30 +105,9 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: groovy.json.JsonException: Lexing failed on line: 1, column: 1, while reading &apos;P&apos;, no possible valid JSON value or punctuation could be recognized.
-	at groovy.json.JsonLexer.nextToken(JsonLexer.java:86)
-	at groovy.json.JsonLexer$nextToken.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:130)
-	at io.restassured.internal.path.json.ConfigurableJsonSlurper.parse(ConfigurableJsonSlurper.groovy:97)
-	at io.restassured.internal.path.json.ConfigurableJsonSlurper$parse.callCurrent(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
-	at io.restassured.internal.path.json.ConfigurableJsonSlurper.parseText(ConfigurableJsonSlurper.groovy:83)
-	at io.restassured.path.json.JsonPath$4$1.method(JsonPath.java:965)
-	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1000)
-	... 32 more
-</pre></div><a href='#' onClick='toggleBox("stack-trace1530504166", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1530504166'><pre>io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document
-	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1002)
-	at io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967)
-	at io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:1047)
-	at io.restassured.path.json.JsonPath.get(JsonPath.java:202)
-	at io.restassured.path.json.JsonPath.getString(JsonPath.java:352)
-	at api.utilities.StringConverter.convertStringToJson(StringConverter.java:13)
-	at api.test.Addplace.TestAddPlaceAPI(Addplace.java:31)
+</pre></div><a href='#' onClick='toggleBox("stack-trace998157332", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace998157332'><pre>java.lang.NullPointerException: Cannot invoke &quot;com.aventstack.extentreports.ExtentTest.info(String)&quot; because &quot;this.loggerE&quot; is null
+	at api.test.Addplace.sqlInjectionM(Addplace.java:59)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -161,24 +134,9 @@ Caused by: groovy.json.JsonException: Lexing failed on line: 1, column: 1, while
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: groovy.json.JsonException: Lexing failed on line: 1, column: 1, while reading &apos;P&apos;, no possible valid JSON value or punctuation could be recognized.
-	at groovy.json.JsonLexer.nextToken(JsonLexer.java:86)
-	at groovy.json.JsonLexer$nextToken.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:130)
-	at io.restassured.internal.path.json.ConfigurableJsonSlurper.parse(ConfigurableJsonSlurper.groovy:97)
-	at io.restassured.internal.path.json.ConfigurableJsonSlurper$parse.callCurrent(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
-	at io.restassured.internal.path.json.ConfigurableJsonSlurper.parseText(ConfigurableJsonSlurper.groovy:83)
-	at io.restassured.path.json.JsonPath$4$1.method(JsonPath.java:965)
-	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1000)
-	... 32 more
 </pre></div></td>
-<td>12</td>
-<td>api.test.Addplace@233795b6</td></tr>
+<td>5</td>
+<td>api.test.Addplace@6f03482</td></tr>
 </table><p>
 </body>
 </html>
