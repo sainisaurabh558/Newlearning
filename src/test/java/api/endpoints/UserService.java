@@ -19,10 +19,9 @@ public class UserService {
 public int  serverResponseCheck()
 	{
 		
-int statuscode =		given().when().get(Routes.BaseURL).then().extract().response().statusCode();
+int statuscode = given().when().get(Routes.BaseURL).then().extract().response().statusCode();
 return statuscode;
 	}
-
 	public void login(String randomValue) {
 
 		String credentials = "sadmin:44647b017dd5bd380deceb96cee22614586f6da0a57af6a590df87625fec0b3a";
@@ -50,11 +49,10 @@ return statuscode;
 
 	}
 
-	// Hitting the add or update component api
+	// Hitting the add or update component API 
 
 	public Response addOrUpdateComponent(AddComponent addcom) {
-	
-		if (token == null) {
+	if (token == null) {
 			throw new IllegalStateException("❌ Token is null. Make sure login() succeeded before this call.");
 		}
 		Response response  = given().log().all().contentType("application/json").header(token).body(addcom).when()
@@ -62,7 +60,8 @@ return statuscode;
 		return response;
 	}
 	
-	
+	// Hitting the add or update cabinet API 
+
 	public Response  add_serial_Structure (JSONObject jsonobject)
 	{
 		
