@@ -1,25 +1,18 @@
 package api.test;
 
 import java.io.IOException;
+import java.lang.reflect.Method;
 
-import org.testng.SkipException;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-import java.lang.reflect.Method;
-import java.net.Socket;
-
-import com.aventstack.extentreports.ExtentTest;
-
 import api.Insertion.AddOrUpdateInsertion;
 import api.Insertion.CabinetAddOrUpdateInsertion;
 import api.Validation.CabinetAddAndUpdate;
 import api.Validation.ValidationForAddAndUpdateApi;
 import api.endpoints.UserService;
 import api.utilities.BaseForReportAndLogging;
-import api.utilities.ExtentReportManager;
 import io.restassured.response.Response;
 
 public class Testfeature extends BaseForReportAndLogging{
@@ -42,8 +35,6 @@ public class Testfeature extends BaseForReportAndLogging{
 		}
 	}
 	
-       
-
 	@BeforeClass
 	void generateToken() {
 
